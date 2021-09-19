@@ -1,0 +1,16 @@
+﻿#include "/Engine/Public/Platform.ush"
+Texture2D<float4> tmpTexture_input;
+RWTexture2D<float4> tmpTexture_out;
+
+uint Index;
+
+[numthreads(8,8,1)]
+void CSTest(uint3 id : SV_DispatchThreadID)
+{
+	float4 TmpColor = tmpTexture_input[id.xy];
+	TmpColor = 1 - TmpColor;
+	tmpTexture_out[id.xy] = TmpColor;
+}
+
+//Unreal的RWTexture2D不支持可读可写
+//读的话只能用Texture2D

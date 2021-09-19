@@ -1,0 +1,29 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "GPUErosion",
+	"Description": "",
+	"Category": "Other",
+	"CreatedBy": "wanli",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "GPUErosion",
+			"Type": "Editor",
+			"LoadingPhase":  "Default"
+		},
+		{
+			"Name": "ErosionCS",
+			"Type": "Runtime",
+			"LoadingPhase":"PostConfigInit"
+		}
+	]
+}
